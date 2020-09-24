@@ -1,0 +1,732 @@
+
+body {
+    margin: 0;
+    padding: 130px 0 0;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+
+#menu_control{
+    position: absolute;
+    opacity: 0;
+    /* z-index: 2; */
+}
+
+header{
+    background-color: rgb(255, 255, 255);
+    height: 130px;
+    width: 100%;
+
+    box-shadow: 0 1px 20px rgba(128, 128, 128, 0.3);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    position: fixed;
+    top: 0;
+    z-index: 99;
+
+    padding: 10px 0 ;
+
+}
+
+nav {
+    
+}
+
+.logo .logo_pc{
+    display: block;
+    height: 60px;
+    margin: 10px 0;
+}
+
+.logo .logo_phone{
+    display: none;
+}
+
+.menu_set > span{
+    display: none;
+}
+
+nav .menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    /* background-color: cadetblue; */
+}
+
+nav .menu ul {
+    padding: unset;
+    font-size: 0;
+    
+    display: flex;
+    /* width: 100%; */
+}
+
+nav .menu ul li {
+    display: block;
+    padding: 0 15px;
+}
+
+nav .menu ul li>a {
+    display: inline-block;
+    /* background-color: cadetblue; */
+    height: 30px;
+    line-height: 30px;
+    width: 120%;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(124, 116, 105);
+    border-bottom: rgba(0, 0, 0, 0) solid .5px;
+    transition: color .3s, border-bottom .3s .2s;
+
+}
+
+nav .menu ul li>a:hover {
+    color: burlywood;
+    border-bottom: burlywood solid 1.5px;
+
+}
+
+
+/* Banner */
+
+.banner {
+    width: 100%;
+    height: calc(100vh - 130px);
+    background-image: url('../img/CA.jpg');
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+.banner p {
+    margin: unset;
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: darkgoldenrod;
+
+    position: absolute;
+    right: calc(50% - 100px);
+    top: calc(50% - 15px);
+}
+
+/* 每個 Section 的 上下Padding 設定 */
+.pd-section {
+    padding: 30px 0 50px;
+}
+
+/*  容器抓在 960px 裡面 */
+.container {
+    width: 960px;
+    margin: auto;
+}
+
+.container .txt {
+    text-align: center;
+    margin: 0 0 30px;
+}
+
+
+/* Service Section */
+#service::before{
+    content: 'test';
+    margin-top: -130px;
+    height:130px;
+
+    display: block;
+    visibility: hidden;
+}
+
+#service> .container .wrap {
+    width: 700px;
+    margin: auto;
+    /* background-color: burlywood; */
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#service> .container .wrap .item {
+    margin: 0 20px;
+    /* background-color: chartreuse; */
+
+}
+
+#service> .container .wrap .item img {
+    width: 90%;
+    vertical-align: bottom;
+}
+
+#service> .container .wrap .item .item_txt {
+    width: 90%;
+    text-align: center;
+}
+
+#service> .container .wrap .item .item_txt h3 {
+    margin: 20px 0 -5px;
+}
+
+#service> .container .wrap .item .item_txt>p {
+    font-size: 14px;
+}
+
+
+/* About Section */
+
+#about::before{
+    content: '';
+    margin-top: -130px;
+    height: 130px;
+
+    display: block;
+    visibility: hidden;
+}
+
+#about> .bg {
+    background-color: rgb(158, 100, 52);
+
+}
+
+#about> .bg .about_img{
+    width: 100%;
+    overflow: hidden;
+    height: 450px;
+}
+
+#about> .bg .about_img img{
+    width: 100%;
+    margin-top: -80px;
+    -webkit-filter:saturate(0.8);
+    opacity: 0.9;
+
+    transition: 0.5s ease-in-out;
+}
+
+#about> .bg .about_img img:hover{
+    -webkit-filter:saturate(1.3);
+    opacity: 1;
+}
+
+
+#about> .bg .container .txt{
+    width: 600px;
+    margin: auto;
+}
+
+
+#about> .bg .container .txt h2{
+    color: rgb(228, 198, 176);
+}
+
+#about> .bg .container .txt p{
+    color: rgb(216, 188, 165);
+}
+
+
+/* Product Section */
+
+#product::before{
+    content: '';
+    margin-top: -130px;
+    height: 130px;
+
+    display: block;
+    visibility: hidden;
+}
+
+#product .container .bikes_group{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#product .container .bikes_group .bike{
+    /* background-color: mediumblue; */
+    width: 25%;
+    text-align: center;
+    margin: auto;
+}
+
+#product .container .bikes_group .bike img{
+    width: 100%;
+    transition: .3s;
+}
+
+#product .container .bikes_group .bike img:hover{
+
+    transform: scale(1.05);
+}
+
+
+/* News Section */
+
+
+#news::before{
+    content: '';
+    margin-top: -130px;
+    height: 130px;
+
+    display: block;
+    visibility: hidden;
+}
+
+
+#news>.news_bg{
+    background-color: #ebd3a0;
+}
+
+#news> .news_bg .container{
+    width: 700px;
+}
+
+#news> .news_bg .container .pd-section-news{
+    padding: 0 0 10px;
+}
+
+#news> .news_bg .container .news_group{
+
+}
+
+
+#news> .news_bg .container .news_group .news_wrap{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 5px;
+
+    color: rgb(105, 77, 56);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    opacity: .9;
+    transition: .3s;
+    /* background-color: yellowgreen; */
+}
+
+#news> .news_bg .container .news_group .news_wrap:hover{
+    transform: scale(1.01);
+    opacity: 1;
+
+}
+
+#news> .news_bg .container .news_group .news_wrap:hover .date{
+    background-color: rgb(185, 129, 85);
+}
+
+#news> .news_bg .container .news_group .news_wrap:hover .info{
+    background-color: rgb(255, 229, 209);
+}
+
+#news> .news_bg .container .news_group .news_wrap .date{
+    margin: 0 8px 0 0 ;
+    padding: 5px 10px;
+
+    background-color: rgb(105, 77, 56);
+    color: wheat;
+    height: 70px;
+    border-radius: 3px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    transition: .3s;
+}
+
+#news> .news_bg .container .news_group .news_wrap .date .year{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#news> .news_bg .container .news_group .news_wrap .date .day{
+    font-size: 18px;   
+    font-weight: 600;
+}
+
+#news> .news_bg .container .news_group .news_wrap .info{
+    padding: 5px 10px;
+    
+    height: 70px;
+    border-radius: 3px;
+    background-color: bisque;
+
+    display: flex;
+    align-items: center;
+}
+
+#news> .pd-last{
+    padding: 0 0 50px;
+}
+
+
+/* Footer Section */
+
+footer{
+    background-color: rgb(78, 51, 16);
+    color: wheat;
+
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    line-height: 50px;
+
+}
+
+
+.gotop a{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(78, 51, 16);
+    color: wheat;
+
+    position: fixed;
+    bottom:30px;
+    right: 30px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.gotop a:hover{
+    transition: 0.3s;
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(109, 72, 23);
+
+    font-weight: 600;
+}
+
+
+@media screen and (max-width:1140px){
+    
+    .pd-section{
+        padding: 30px 30px 50px;
+        
+    }
+    
+    .container{
+        width: 80%;
+    }
+
+    .container .txt{
+        padding: 0 30px;
+    }
+
+    #service> .container .wrap {
+        width: 100%;
+    }
+
+    
+    
+    #product .container .bikes_group{
+        padding: 0 30px;
+    }
+    #product .container .bikes_group .bike{
+        width: 48%;
+    }
+
+    #news> .news_bg .container .news_group{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #news> .news_bg .container .news_group .news_wrap{
+        display: block;
+        width: 48%;
+        margin: 10px auto;
+    }
+
+    #news> .news_bg .container .news_group .news_wrap:nth-child(5){
+        display: none;
+    }
+
+
+    #news>.news_bg .container .news_group .news_wrap .date{
+        width: 100%;
+        height: unset;
+        padding: 10px;
+        margin: 0 0 5px;
+    }
+
+    #news> .news_bg .container .news_group .news_wrap .date .year{
+        font-size: 16px;
+        margin-right: 5px;
+    }
+
+    #news> .news_bg .container .news_group .news_wrap .date .day{
+        font-size: 16px;
+    }
+
+    #news> .news_bg .container .news_group .news_wrap .info{
+        width: 100%;
+        height: unset;
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width:768px){
+    
+    body {
+        padding: 80px 0 0;
+    }
+
+
+    #menu_control{
+        position: absolute;
+        opacity: 0;
+        /* z-index: 2; */
+    }
+
+    header {
+        background-color: #392313;
+        height: 80px;
+        width: 100%;
+        /* box-shadow: 0 1px 5px gray; */
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+
+        padding: 0 ;
+    }
+
+    header::before{
+        content:'';
+        width: 100%;
+        height: 80px;
+        box-shadow: 0 1px 5px gray;
+        display: block;
+        background-color: #392313;
+    }
+
+    /* 使用 position 讓 LOGO 在 header 是上下置中 */
+
+    .logo .logo_pc{
+        display: none;
+    }
+
+    .logo .logo_phone{
+        display: block;
+
+        position: absolute;
+        top:15px;
+        left:15px;
+        height: 50px;
+    }
+
+
+    /* 使用 position 讓 Menu區塊 在 header 是上下置中 */
+    .menu_set{
+        display: block;
+        height: 50px;
+        width: 50px;
+        /* background-color: burlywood; */
+        
+        position: absolute;
+        top:15px;
+        right: 20px;
+    }
+
+
+    /* 隱藏漢堡條上面的文字 */
+    .menu_set > span{
+        opacity: 0;
+        width: 1px;
+        height: 1px;
+        display: block;
+        overflow: hidden;
+
+        /* Overflow: hidden 是防止超出去的漏出來 */
+    }
+
+
+    .menu_set::before{
+        content:'';
+
+        /* 先把中間的線條做出來 */
+        width: 40px;
+        height: 2.5px;
+        background-color: white;
+        
+        position: absolute;
+        left: 5px;
+        top:0px;
+        bottom: 0px;
+        margin: auto;
+        /* 設定上下為0，利用margin:auto 讓他上下置中 */
+
+        box-shadow: 0px 10px 0 white, 0px -10px 0 white;
+        /* 利用 box-shadow， X軸不設定，只設定Y軸，且不做羽化效果(就會呈現等寬高的直線)，再設定影子的顏色，就可以獲得一個上下的漢堡麵包! */
+    }
+
+
+    nav{
+        width: 100%;
+        /* height: 100vh; */
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: -100vh;
+        left: 0;
+        z-index: -2;
+        /* left: -100%; */
+
+        /* display: none; */
+        transition: 1s;
+    }
+
+    /* 設定點選"區塊"可以連連結，而非點選"字" */
+
+    nav .menu ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav .menu ul li{
+        padding: 0 ;
+    }
+
+    nav > .menu ul>li a{
+        
+        height: 80px;
+        line-height: 80px;
+        width: 100%;
+        font-size: 24px;
+        border-bottom:unset;
+
+        transition: .5s;
+    }
+    nav > .menu ul>li a:hover{
+        background-color:lightyellow;
+    }
+
+
+
+    /*  當點擊漢堡條，nav會有動作。 */
+
+    /* 當#menu_control(觸發Checkbox的id)被點擊(Checked)，用 "~" 選擇到指定項目的路徑<須從父層開始進入>。 */
+    
+    #menu_control:checked ~ header nav {
+        top:80px;
+        /* left: 0; */
+        /* display: block; */
+    }
+    
+
+    .banner{
+        width: 100%;
+        height: calc(100vh - 80px);
+    }
+
+    .banner p{
+        display: none;
+    }
+
+
+
+
+    .container{
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .container .txt{
+        padding: 0 30px;
+    }
+    
+    #service> .container .wrap{
+        width: 100%;
+        padding: 0px 20px;
+        flex-direction: column;
+    }
+
+    #service> .container .wrap .item{
+        width: 100%;
+        margin: 0 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        box-shadow: 0px .3px 5px rgb(226, 226, 226);
+        /* background-color: #f3e4c5; */
+        padding: 20px;
+    }
+
+    #service> .container .wrap .item img{
+        width: 30%;
+        margin-right: 20px;
+    }
+
+    #service> .container .wrap .item .item_txt{
+        width: 50%;
+        
+    }
+
+
+    #about> .bg .about_img{
+        height: unset;
+        overflow: unset;
+    }
+
+    #about> .bg .about_img img{
+        margin-top: unset;
+    }
+
+    #about> .bg .container .txt{
+        width: 100%;
+    }
+
+    #product .container .bikes_group{
+        padding: 0 60px;
+    }
+
+    #product .container .bikes_group .bike{
+        width:100%;
+        padding-bottom: 20px;
+    }
+
+    #news> .news_bg .container{
+        width: 100%;
+        padding: 0 60px;
+    }
+
+    #news> .news_bg .container .news_group .news_wrap{
+        width: 100%;
+    }
+
+    #news> .news_bg .container .news_group .news_wrap .info{
+        height: unset;
+    }
+
+
+}
